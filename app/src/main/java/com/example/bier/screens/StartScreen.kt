@@ -6,14 +6,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun StartScreen(){
 
     val mStartScreenViewModel: StartScreenViewModel = viewModel()
-    //val mX by mStartScreenViewModel.mTM.mTime.collectAsState()
+    val mTime by mStartScreenViewModel.mTM.mTime.collectAsState()
     //val mJSON by mStartScreenViewModel.mJsonString.observeAsState()
 
     Column {

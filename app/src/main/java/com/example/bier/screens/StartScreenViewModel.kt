@@ -2,10 +2,12 @@ package com.example.bier.screens
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-//import com.example.timemanager.TimeManager
+import com.example.timemanager.TimeManager
 import kotlinx.coroutines.launch
 
 class StartScreenViewModel: ViewModel() {
+
+    val mTM = TimeManager()
     //val mX = mTM.mTime
 
 
