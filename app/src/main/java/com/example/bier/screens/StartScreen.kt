@@ -13,11 +13,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 fun StartScreen(){
 
     val mStartScreenViewModel: StartScreenViewModel = viewModel()
-    val mX by mStartScreenViewModel.mTM.mTime.collectAsState()
+    //val mX by mStartScreenViewModel.mTM.mTime.collectAsState()
     //val mJSON by mStartScreenViewModel.mJsonString.observeAsState()
 
     Column {
-        Text(text = "Handler: $mX")
+        //Text(text = "Handler: $mX")
         //Text(text = "JSON: $mJSON")
         Button(
             onClick = { mStartScreenViewModel.start() }

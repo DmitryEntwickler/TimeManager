@@ -6,8 +6,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 class StartScreenViewModel: ViewModel() {
-    val mTM = TimeManager()
-    val mX = mTM.mTime
+    //val mX = mTM.mTime
 
 
     //val mY = MutableLiveData(0)
@@ -39,11 +38,11 @@ class StartScreenViewModel: ViewModel() {
 
     fun start(){
         viewModelScope.launch {
-           mTM.timerStart()
+          // mTM.timerStart()
         }
     }
     fun stop(){
-        mTM.timerStop()
+       // mTM.timerStop()
     }
 
 
