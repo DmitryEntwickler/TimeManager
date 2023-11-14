@@ -50,8 +50,8 @@ afterEvaluate {
                 //from(components.findByName("TimeManager"))
                 groupId = "com.github.DmitryEntwickler"
                 artifactId = "time-manager"
-                version = "1.5"
-                artifact("$buildDir/ouputs/aar/TimeManager-debug.aar")
+                version = "1.6"
+                artifact("$buildDir/ouputs/aar/TimeManager-release.aar")
             }
         }
     }
