@@ -43,29 +43,12 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-/*
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("mavenJava"){
-                //from(components.findByName("TimeManager"))
-                groupId = "com.github.DmitryEntwickler"
-                artifactId = "time-manager"
-                version = "1.6"
-                artifact("$buildDir/ouputs/aar/TimeManager-release.aar")
-            }
-        }
-    }
-}
-
- */
-
 publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.github.DmitryEntwickler"
-            artifactId = "time-manager"
-            version = "1.7"
+            artifactId = "TimerManager"
+            version = "1.8"
 
             afterEvaluate {
                 from(components["release"])

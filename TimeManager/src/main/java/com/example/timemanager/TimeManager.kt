@@ -25,4 +25,8 @@ class TimeManager {
     fun timerStop() {
         mIsTimerRunning = false
     }
+
+    fun timerReset(){
+        mTime.value = 0
+    }
 }
