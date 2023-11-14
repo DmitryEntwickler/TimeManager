@@ -48,7 +48,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.DmitryEntwickler"
             artifactId = "TimerManager"
-            version = "1.8"
+            version = "2.0"
 
             afterEvaluate {
                 from(components["release"])

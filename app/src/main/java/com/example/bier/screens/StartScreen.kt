@@ -12,7 +12,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 fun StartScreen(){
 
     val mStartScreenViewModel: StartScreenViewModel = viewModel()
-    val mTime by mStartScreenViewModel.mTM.mTime.collectAsState()
+    //val mTime by mStartScreenViewModel.mTM.mTime.collectAsState()
     //val mJSON by mStartScreenViewModel.mJsonString.observeAsState()
 
     Column {
