@@ -50,7 +50,7 @@ afterEvaluate {
                 from(components.findByName("TimeManager"))
                 groupId = "com.github.dmitryentwickler"
                 artifactId = "TimeManager"
-                version = "1.0"
+                version = "1.3"
             }
         }
     }
