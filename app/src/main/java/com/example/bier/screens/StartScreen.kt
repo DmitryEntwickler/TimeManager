@@ -14,13 +14,11 @@ fun StartScreen(){
 
     val mStartScreenViewModel: StartScreenViewModel = viewModel()
     val mX by mStartScreenViewModel.mTM.mTime.collectAsState()
-    val mY by mStartScreenViewModel.mY.observeAsState()
-    val mJSON by mStartScreenViewModel.mJsonString.observeAsState()
+    //val mJSON by mStartScreenViewModel.mJsonString.observeAsState()
 
     Column {
         Text(text = "Handler: $mX")
-        Text(text = "Coroutine: $mY")
-        Text(text = "JSON: $mJSON")
+        //Text(text = "JSON: $mJSON")
         Button(
             onClick = { mStartScreenViewModel.start() }
         ) {

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.timemanager"
+    namespace = "com.example.new_modlue"
     compileSdk = 34
 
     defaultConfig {

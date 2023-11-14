@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "Bier"
 include(":app")
 include(":TimeManager")
+include(":new-modlue")

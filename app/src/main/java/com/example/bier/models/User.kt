@@ -1,5 +1,6 @@
 package com.example.bier.models
 
+/*
 import kotlinx.serialization.Required
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -24,3 +25,5 @@ data class Project(
     )
 
 
+
+ */

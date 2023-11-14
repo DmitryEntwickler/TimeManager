@@ -1,25 +1,28 @@
 package com.example.timemanager
 
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
 
 class TimeManager {
 
-    var time = 0
-    private var isTimerRunning = false
+    val mTime = MutableStateFlow(0)
+    private var mIsTimerRunning = false
 
 
-    suspend fun timerStart(){
-        if (!isTimerRunning) {
-            isTimerRunning = true
-            while (isTimerRunning){
+    suspend fun timerStart() {
+
+        if (!mIsTimerRunning){
+            mIsTimerRunning = true
+            while (mIsTimerRunning) {
                 delay(1000)
-                time += 1
+                mTime.value = mTime.value.plus(1)
+                println("-> ${mTime.value}, $mIsTimerRunning")
             }
         }
 
     }
 
-    fun timerStop(){
-        isTimerRunning = false
+    fun timerStop() {
+        mIsTimerRunning = false
     }
 }

@@ -1,16 +1,17 @@
 package com.example.bier.screens
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.bier.models.TimeManager
+import com.example.timemanager.TimeManager
 import kotlinx.coroutines.launch
 
 class StartScreenViewModel: ViewModel() {
     val mTM = TimeManager()
     val mX = mTM.mTime
-    val mY = MutableLiveData(0)
-    val mJsonString = MutableLiveData("")
+
+
+    //val mY = MutableLiveData(0)
+    //val mJsonString = MutableLiveData("")
 
 
 
@@ -38,7 +39,7 @@ class StartScreenViewModel: ViewModel() {
 
     fun start(){
         viewModelScope.launch {
-            mTM.timerStart()
+           mTM.timerStart()
         }
     }
     fun stop(){

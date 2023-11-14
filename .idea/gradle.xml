@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/TimeManager" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/new-modlue" />
           </set>
         </option>
       </GradleProjectSettings>

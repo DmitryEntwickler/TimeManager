@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.bier"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.bier"
@@ -77,6 +77,6 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:$compose_version")
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.5.0-alpha01")
-    // kotlinx.serialization JSON
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+
+    implementation(project(mapOf("path" to ":TimeManager")))
 }
