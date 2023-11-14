@@ -47,10 +47,10 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("mavenJava"){
-                from(components.findByName("TimeManager"))
-                groupId = "com.github.dmitryentwickler"
-                artifactId = "TimeManager"
-                version = "1.3"
+                //from(components.findByName("TimeManager"))
+                groupId = "com.github.DmitryEntwickler"
+                artifactId = "time-manager"
+                version = "1.4"
             }
         }
     }
