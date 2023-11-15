@@ -9,6 +9,7 @@ class TimeManager() {
 
     val mTime = MutableStateFlow(0)
     val mPeriodicallyMakerStatus = MutableStateFlow(EPeriodicallyMakerStatus.STOPPED)
+    val mPeriodicallyMakerTick = MutableStateFlow(1L)
 
     // private parameter
 
@@ -43,12 +44,11 @@ class TimeManager() {
     suspend fun doPeriodically(delay: Long, everyTimes: Int, action: () -> Unit) {
         if (mPeriodicallyMakerStatus.value == EPeriodicallyMakerStatus.STOPPED) {
             mPeriodicallyMakerStatus.value = EPeriodicallyMakerStatus.RUNNING
-            var tick = 0L
             while (mPeriodicallyMakerStatus.value != EPeriodicallyMakerStatus.STOPPED) {
                 delay(delay)
                 if (mPeriodicallyMakerStatus.value != EPeriodicallyMakerStatus.STOPPED) {
-                    tick += 1
-                    if (tick % everyTimes == 0L) {
+                    mPeriodicallyMakerTick.value = mPeriodicallyMakerTick.value.plus(1)
+                    if (mPeriodicallyMakerTick.value % everyTimes == 0L) {
                         mPeriodicallyMakerStatus.value = EPeriodicallyMakerStatus.TIME_TO_DO_SOMETHING
                         action()
                     }
@@ -62,6 +62,7 @@ class TimeManager() {
 
     fun stopDoPeriodically(){
         mPeriodicallyMakerStatus.value = EPeriodicallyMakerStatus.STOPPED
+        mPeriodicallyMakerTick.value = 0
         println("-> tick status: ${mPeriodicallyMakerStatus.value}")
     }
 }

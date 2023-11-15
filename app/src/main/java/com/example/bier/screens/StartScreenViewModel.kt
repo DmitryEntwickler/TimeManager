@@ -11,7 +11,7 @@ class StartScreenViewModel: ViewModel() {
 
     fun doPeriodically(){
         viewModelScope.launch {
-            mTM.doPeriodically(1000,2, {} )
+            mTM.doPeriodically(500,4, {} )
         }
     }
     fun stopDoPeriodically(){

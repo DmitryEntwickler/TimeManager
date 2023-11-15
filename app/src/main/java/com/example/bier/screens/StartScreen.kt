@@ -16,6 +16,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.timemanager.EPeriodicallyMakerStatus
@@ -25,6 +26,7 @@ fun StartScreen(){
 
     val mStartScreenViewModel: StartScreenViewModel = viewModel()
     val mPeriodicallyMakerStatus by mStartScreenViewModel.mTM.mPeriodicallyMakerStatus.collectAsState()
+    val mPeriodicallyMakerTick by mStartScreenViewModel.mTM.mPeriodicallyMakerTick.collectAsState()
 
     Column {
 
@@ -61,6 +63,12 @@ fun StartScreen(){
         ) {
             Text(text = "start")
         }
+        Text(
+            text = mPeriodicallyMakerTick.toString(),
+            modifier = Modifier.fillMaxWidth(),
+            color = MaterialTheme.colorScheme.primary,
+            textAlign = TextAlign.Center
+        )
         Button(
             modifier = Modifier
                 .fillMaxWidth()
